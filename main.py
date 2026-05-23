@@ -13,6 +13,10 @@ async def dias(request: Request):
 async def pais(request: Request):
     return templates.TemplateResponse(request=request, name="pais.html")
 
+@app.get("/pais")
+async def pais(request: Request):
+    return templates.TemplateResponse(request=request, name="pais.html")
+
 @app.get("/asignatura")
 async def asignatura(request: Request):
     data = {
