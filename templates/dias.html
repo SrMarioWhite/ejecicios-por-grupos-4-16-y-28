@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block titulo %}Dias de la semana{% endblock %}
+{% block encabezado %}Dias de la semana{% endblock %}
+{% block nav %}
+{% endblock %}
+{% block contenido %}
+        <ul>
+            {% for dia in dias_semana %}
+                <li>{{ loop.index }}. {{ dia }}</li>
+            {% endfor %}
+        </ul>
+
+{% endblock %}

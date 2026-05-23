@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block titulo %}Asignaturas{% endblock %}
+{% block encabezado %}Asignaturas y Temas{% endblock %}
+<h1>Plan de Estudios</h1>
+{% block nav %}
+{% endblock %}
+{% block contenido %}
+
+    
+    {% for asignatura, temas in asignaturas.items() %}
+        <p>
+            <strong>Asignatura:</strong> {{ asignatura }} ; 
+            <strong>Temas:</strong> 
+            {% for tema in temas %}
+                {{ tema }}{% if not loop.last %}, {% endif %}
+            {% endfor %}
+        </p>
+    {% endfor %}
+{% endblock %}
