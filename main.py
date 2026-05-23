@@ -9,7 +9,7 @@ async def dias(request: Request):
     lista_dias = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]
     return templates.TemplateResponse(request=request, name="dias.html", context={"dias_semana": lista_dias})
 
-@app.get("/pais")
+@app.get("/")
 async def pais(request: Request):
     return templates.TemplateResponse(request=request, name="pais.html")
 
